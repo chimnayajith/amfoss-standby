@@ -1,0 +1,24 @@
+1. operators -> * , - , / , +
+   values -> 'hello' , -88.8 , 5
+   
+
+2. spam is a variable whereas "spam"(enclosed within quotes) is a string.
+
+3. data types -> int , str , boolean , float
+
+4. expressions has values and operatoes. They can be calculated to a single value.
+
+5. expression is the calculation of values by operators whereas assignment means assigning a value to a particular variable.
+
+6. bacon has the value 20
+
+7. (a) spamspamspam
+   (b) spamspamspam
+
+8. eggs is a valid variable name as it follows all the rules of naming variables in python. 
+   whereas 100 does not follow the rules. variable names cannot start with numerical values.
+ 
+9. int() , float() , str()
+
+10. this expression errors because strings can be concatinated using + operator but not integer data types. the correct expression would be :
+	'I have eaten ' + '99' + ' burritos.'
