@@ -1,0 +1,27 @@
+1. Functions reduces redundant code i.e theres no repetance of the same code. makes it more readable and easy to understand as tasks are made separate.
+
+2. the code in a function is executed only when the function is called.
+
+3. the def keyword followed by the function name and the paranthesis creates a function..
+
+4. a function is the function definition and the code inside the function. whereas the function call is what calls the function and then executes the code inside the function.
+
+5. there is one global scope and a local scope for each function that is called.
+
+6. after returning a value from a function the local scope is deleted and variables in the particular local scope cannot be accessed anymore.
+
+7. it the value that the function returns on function call. yes it can be used in a expression.
+
+8. it will be None
+
+9. the global keyword will force the variable to refer to global variable.
+
+10. NoneType
+
+11. it imports the module areallyourpetsnamederic.
+
+12. spam.bacon()
+
+13. place the code in a try except block.
+
+14. any code that can cause an error is placed in the try block and the code to be executed when theres an error is placed in the except block

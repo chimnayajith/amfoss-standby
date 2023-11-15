@@ -1,0 +1,37 @@
+1. empty list
+
+2. by using the statement:
+	spam[2] = "hello"
+	
+3. the expression evaluates to 3, so spam[3] is "d"
+
+4. "d"
+
+5. ["a", "b"]
+
+6. 1
+
+7. [3.14, 'cat', 11, 'cat', True, 99]
+
+8. [3.14, 11, 'cat', True]
+
+9. concatination operator : +
+   replication operator   : *
+   
+10. the append() function adds an element to the end of the list, whereas the insert() function inserts an element to the specified position.
+
+11. del and remove()
+
+12. have index. traversible through both , can be concatinated .
+
+13. lists are mutable.elements can be addedd and changed.enclosed with []
+    tuples are immutable; cannot be changed; enclosed with ()
+
+14. (42 ,)
+
+15. tuple() and list() converts one to the other.
+
+16. they contain reference to each value in the list.
+
+17. copy.copy() makes a shallow copy of the list . copy.deepcopy() makes a deep copy of the list.
+

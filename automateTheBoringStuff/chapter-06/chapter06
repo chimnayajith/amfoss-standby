@@ -1,0 +1,26 @@
+1. escape characters are characters that cannot be typed as it is. and need to be preceeded by a backslash (/).
+
+2. \n - new line
+   \t - tab space
+
+3. by using \\
+
+4. because the string is enclosed within double quotes, it is okay to use single quotes without using escape characters.
+
+5. we can use multi-line strings to print to the next line.
+
+6. - 'e'
+   - 'Hello'
+   - 'Hello'
+   - 'lo, world!'
+   
+7. - 'HELLO'
+   - True
+   - 'hello'
+   
+8. - ['Remember,' ,'remember,' ,'the', 'fifth' ,'of' ,'November.']
+   - There-can-only-be-one.
+   
+9. we can use rjust() , ljust() , center() respectively
+
+10. lstrip() to remove whitespace from the beginning and rstrip() from the end

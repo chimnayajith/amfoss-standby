@@ -1,0 +1,78 @@
+1. The two boolean values are true and false. They are written as True and False.
+
+2. The three boolean operators are : and or and not.
+
+3. 
+and operator
+
+a   b   a and b
+1   1       1
+1   0       0
+0   1       0
+0   0       0
+
+or operator
+
+a   b   a or b
+1   1       1
+1   0       1
+0   1       1
+0   0       0
+
+not operator
+
+a   not a
+1     0
+0     1
+
+4. a)False
+   b)True
+   c)False
+   d)True
+   e)False
+   f)True
+   
+5. The six comparison operators are : < , > , <= , >= , == , !=.
+
+6. The equal to operators returns a boolean value after checking if the LHS and RHS are equal or not. The assignment opearator assigns a value to a particular variable.
+
+7. A condition is used to decide the flow of a program. It is always a boolean value. Checks if a given condition is True or False then executes a code, else , executes a different code. 
+
+8. The first block is :
+
+```
+print('eggs')
+if spam > 5:
+	print('bacon')
+else:
+	print('ham')
+print('spam')
+```
+The second and third are
+print('bacon') and print('ham')
+
+9. 
+if(spam ==1):
+	print('Hello')
+elif(spam == 2):
+	print('Howdy')
+else:
+	print("Greetings")
+
+
+10. ctrl+c can be used to stop the execution of a program.
+
+11. break will stop the execution of the loop and move outside, whereas continue will skip the current loop and go to the next loop i.e jumps to start of the loop.
+
+12. There is no difference between the given three ranges are all of these gives numbers from 0 to 9.the start is by default 0 even if not specified. for the step value too the default is 1.
+
+13.
+for i in range(1, 11):
+	print(i)
+
+i=1	
+while i<11:
+	print(i)
+	i+=1
+	
+14. spam.bacon()
