@@ -1,0 +1,22 @@
+1. the current working directory.
+
+2. with the root folder.
+
+3. C:/Users/Al
+
+4. errors as it is using the / operator between strings
+
+5. os.cwd returns the current working directory and os.chdir() changes the directory.
+
+6. . means the same directory and .. is the parent directory
+
+7. C:\bacon\eggs\ is the dir name and spam.txt is the base name
+
+8. r , w and a
+
+9. it is overwritten
+
+10. read() functions returns the whole content of the file as a single string
+    readlines() returns the content as list of strings . where each item is a line in the file
+    
+11. dictionary
