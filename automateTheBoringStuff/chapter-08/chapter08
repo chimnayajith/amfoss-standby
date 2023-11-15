@@ -1,0 +1,14 @@
+1. no it is a 3rd party module.
+
+2. so that its easier to type.
+
+3. inputInt() gives a int value whereas inputFloat() gives a float value.
+
+4. inputInt(min =0 , max=99)
+
+5. only inputs that follow the regex patterns in allowRegexes are accepted and the ones from blockRegexes are not accepted.
+
+6. since the limit is 3, after 3 wrong inputs, thr program errors. RetryLimitException.
+
+7. after 3 blank input the value is stored as 'hello' by default.
+
