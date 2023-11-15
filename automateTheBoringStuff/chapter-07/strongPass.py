@@ -21,6 +21,6 @@ def isStrong(pasw):
 
 password = input()
 if isStrong(password):
-    print("ok")
+    print("Strong")
 else:
-    print("not ok")
+    print("Weak")
