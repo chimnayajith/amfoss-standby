@@ -1,0 +1,7 @@
+1. shutil.copy() copies a single file where shutil.copytree() copies an entire folder.
+
+2. shutil.move()
+
+3. send2trash deletes to the recycle bin while shutil will permanantly delete files and folders
+
+4. zipfile.ZipFIle() 
