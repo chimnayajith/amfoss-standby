@@ -1,0 +1,4 @@
+https://ccbv.co.uk/
+https://dennisivy.teachable.com/p/django-beginners-course
+https://realpython.com/django-todo-lists/#demo
+https://docs.djangoproject.com
