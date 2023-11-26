@@ -1,16 +1,17 @@
 {% extends 'base/template.html' %}
 {% block content %}
 
+<div class="header-bar">
+    <h1 style="padding-left: 5px;">Register </h1><i class="fa fa-sign-in" style="font-size: 38px;padding: 20px;"></i>
+</div>
 
-<h1>Register</h1>
-
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Register">
-</form>
-
-
-<p>Already a member? <a href="{% url 'login'%}">Login</a></p>
+<div class="cardBody">
+    <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Register">
+        <p>Already a member? <a href="{% url 'login'%}">Login</a></p>
+    </form>
+</div>
 
 {% endblock content %}

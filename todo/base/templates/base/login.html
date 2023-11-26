@@ -2,16 +2,21 @@
 {% block content %}
 
 
-<h1>Login</h1>
 
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Login">
-</form>
+<div class="header-bar">
+    <h1 style="padding-left: 5px;">Login</h1><i class="fa fa-sign-in" style="font-size: 38px;padding: 20px;"></i>
+</div>
+<div class="cardBody">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Login">
+        <p>Account-less? <a href="{% url 'register'%}">Register</a></p>
+    </form>
+</div>
 
 
-<p>Account-less? <a href="{% url 'register'%}">Register</a></p>
+
 
 
 {% endblock content %}
