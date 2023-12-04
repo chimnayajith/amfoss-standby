@@ -35,6 +35,7 @@ const EachNote = () => {
   };
 
   let createNote = async() => {
+    console.log(JSON.stringify(note))
     fetch(`/api/notes/create/` , {
       method : "POST",
       headers:{
