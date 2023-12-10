@@ -78,7 +78,7 @@ const PhotoEditingComponent = () => {
   }
 
   return (
-    <div>
+    <div style={{ maxWidth: "900px", margin: "auto" }}>
       <input type="file" accept="image/*" onChange={handleFileChange} />
       {image && (
         <div>
@@ -95,8 +95,8 @@ const PhotoEditingComponent = () => {
               </option>
             ))}
           </select>
-          <div>
-            <canvas ref={canvasRef} />
+          <div style={{ maxWidth: "600px", margin: "auto" }}>
+            <canvas ref={canvasRef} style={{ maxWidth: "100%", height:'auto' }}/>
           </div>
           <button onClick={handleSave}>Save Image</button>
         </div>
