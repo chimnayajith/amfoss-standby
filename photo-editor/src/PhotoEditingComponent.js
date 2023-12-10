@@ -1,22 +1,13 @@
-import React, { useState , useRef } from "react";
-import ImageFilter from "react-image-filter";
+import React, { useState, useRef, useEffect } from "react";
 
 const PhotoEditingComponent = () => {
-  // matrix for the orginal filter
-  const orginal_filter = [
-    1, 0, 0, 0, 0, 
-    0, 1, 0, 0, 0, 
-    0, 0, 1, 0, 0, 
-    0, 0, 0, 1, 0,
-  ]
-
   const [image, setImage] = useState(null);
-  const [selectedFilter, setSelectedFilter] = useState(orginal_filter);
+  const [selectedFilter, setSelectedFilter] = useState('original');
   const canvasRef = useRef(null)
-  // List of available filters
+
   const filters = [
     {
-      name: orginal_filter,
+      name: 'original',
       label: "Orginal",
     },
     {
@@ -44,28 +35,48 @@ const PhotoEditingComponent = () => {
       reader.readAsDataURL(img);
     }
   };
+ useEffect(() => {
+  const canvas = canvasRef.current
+  if(!canvas || !image) return;
 
-  const handleSave = () => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d')
+  const img = new Image()
+  
+  img.onload = () => {
+    canvas.width = img.width
+    canvas.height = img.height
 
-    const img = new Image()
-    img.onload = () => {
-      ctx.clearRect(0,0,canvas.width , canvas.height);
-      ctx.drawImage(img , 0 , 0 , canvas.width , canvas.height);
-
-      const editedImage = canvas.toDataURL('image/png');
-
-      const downloadLink = document.createElement('a')
-      downloadLink.href = editedImage
-      downloadLink.download = 'edited_image.png'
-
-      document.body.appendChild(downloadLink)
-      downloadLink.click()
-      document.body.removeChild(downloadLink)
+    if (selectedFilter === "grayscale") {
+      ctx.filter = "grayscale(100%)";
+    } else if (selectedFilter === "invert") {
+      ctx.filter = "invert(100%)";
+    } else if (selectedFilter === "sepia") {
+      ctx.filter = "sepia(100%)";
+    } else {
+      ctx.filter = "none";
     }
-    img.src = image
+    ctx.drawImage(img , 0,0)
+
+    ctx.filter = 'none' //ressetting the filter
   }
+  img.src = image
+ },[image , selectedFilter])
+ 
+
+ const handleSave = () => {
+  const canvas = canvasRef.current;
+
+    const editedImage = canvas.toDataURL('image/png');
+
+    const downloadLink = document.createElement('a')
+    downloadLink.href = editedImage
+    downloadLink.download = 'edited_image.png'
+
+    document.body.appendChild(downloadLink)
+    downloadLink.click()
+    document.body.removeChild(downloadLink)
+  }
+
   return (
     <div>
       <input type="file" accept="image/*" onChange={handleFileChange} />
@@ -73,18 +84,19 @@ const PhotoEditingComponent = () => {
         <div>
           <label>Select Filter: </label>
           <select
-            value={JSON.stringify(selectedFilter)}
-            onChange={(e) => setSelectedFilter(JSON.parse(e.target.value))}
+            value={selectedFilter}
+            onChange={(e) =>
+              setSelectedFilter(e.target.value)
+            }
           >
             {filters.map((filter) => (
-              <option key={filter.name} value={JSON.stringify(filter.name)}>
+              <option key={filter.name} value={filter.name}>
                 {filter.label}
               </option>
             ))}
           </select>
           <div>
-          <canvas ref={canvasRef} width={500} height={500} />
-            <ImageFilter image={image} filter={selectedFilter} ref={canvasRef} />
+            <canvas ref={canvasRef} />
           </div>
           <button onClick={handleSave}>Save Image</button>
         </div>
