@@ -6,7 +6,7 @@ const EachNote = () => {
   let {id} = useParams()
   let history = useNavigate()
 
-  let [note , setNote] = useState({body: '' , deadline: ''})
+  let [note , setNote] = useState({body: '' , deadline: null})
   useEffect(() => {
     getNote()
   },[])
@@ -19,6 +19,7 @@ const EachNote = () => {
   }
 
   let handleTextChange = (e) => {
+    console.log('hehe')
     setNote(note => ({
       ...note,
       'body': e.target.value,
@@ -27,6 +28,7 @@ const EachNote = () => {
 
 
   let handleDeadlineChange = (e) => {
+    console.log('hello')
     const deadline = new Date(e.target.value).toISOString().slice(0, 19) + 'Z'
     setNote(note => ({
       ...note,
@@ -101,3 +103,6 @@ const EachNote = () => {
 }
 
 export default EachNote
+
+
+
