@@ -19,7 +19,6 @@ const EachNote = () => {
   }
 
   let handleTextChange = (e) => {
-    console.log('hehe')
     setNote(note => ({
       ...note,
       'body': e.target.value,
@@ -28,7 +27,6 @@ const EachNote = () => {
 
 
   let handleDeadlineChange = (e) => {
-    console.log('hello')
     const deadline = new Date(e.target.value).toISOString().slice(0, 19) + 'Z'
     setNote(note => ({
       ...note,
@@ -37,7 +35,6 @@ const EachNote = () => {
   };
 
   let createNote = async() => {
-    console.log(JSON.stringify(note))
     fetch(`/api/notes/create/` , {
       method : "POST",
       headers:{
@@ -73,7 +70,7 @@ const EachNote = () => {
       deleteNote()
     } else if (id !== 'new'){
       updateNote()
-    } else if (id === 'new' && note.body !== null){
+    } else if (id === 'new' && note.body !== null && note.body !== ''){
       createNote()
     }
     history('/')
@@ -96,7 +93,7 @@ const EachNote = () => {
         <textarea onChange={(e) => {handleTextChange(e)}} value={note.body}></textarea>
         <div className="datetime-container">
           <label htmlFor="datetime">Deadline (Optional) : </label>
-          <input onChange={(e) => {handleDeadlineChange(e)}} type="datetime-local" id="datetime" name="datetime" value={note.deadline? note.deadline.slice(0, 16) : '' }/> 
+          <input onChange={(e) => {handleDeadlineChange(e)}} type="datetime-local" id="datetime" name="datetime" value={note.deadline? note.deadline.slice(0, 16) : null }/> 
       </div>
     </div>
   )

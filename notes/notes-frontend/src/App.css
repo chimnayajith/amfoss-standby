@@ -58,7 +58,6 @@ a {
   align-items: center;
 }
 
-
 .app {
   width: 100%;
   max-width: 700px;
@@ -140,11 +139,7 @@ a {
   margin: 16px 0;
   height: 70vh;
   overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-}
-
-.notes-list::-webkit-scrollbar {
-  display: none;
+  scrollbar-width: none; 
 }
 
 .notes-list-item {
@@ -175,6 +170,7 @@ a {
   color: var(--color-light);
 }
 
+/* create button  */
 .floating-button {
   font-size: 48px;
   position: absolute;
@@ -266,10 +262,7 @@ a {
   border: none;
 }
 
-.note textarea::-webkit-scrollbar {
-  display: none;
-}
-
+/* light and dark mode button */
 .mode-switch {
   position : fixed;
   top: 18px;
